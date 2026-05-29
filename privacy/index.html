@@ -33,13 +33,13 @@
     <p class="updated">อัปเดตล่าสุด: 28 พฤษภาคม 2569</p>
 
     <h2>สรุป</h2>
-    <p>Sub Sook <strong>ซิงค์ข้อมูล Subscription และค่าใช้จ่ายประจำของคุณขึ้นคลาวด์</strong> (Supabase) ภายใต้บัญชีของคุณ ทั้ง <strong>แผนฟรีและ Sub Sook Premium</strong> และเก็บสำเนาไว้ในเครื่อง (SQLite) เพื่อใช้งานออฟไลน์ ต้องลงชื่อเข้าใช้ด้วย <strong>Apple</strong> หรือ <strong>Google</strong> เราไม่ขายข้อมูลของคุณและไม่ติดตามข้ามแอปเพื่อโฆษณา</p>
+    <p>Sub Sook <strong>ซิงค์ข้อมูล Subscription และค่าใช้จ่ายประจำของคุณขึ้นคลาวด์</strong> (เซิร์ฟเวอร์ PocketBase ที่เราดูแลเอง) ภายใต้บัญชีของคุณ ทั้ง <strong>แผนฟรีและ Sub Sook Premium</strong> และเก็บสำเนาไว้ในเครื่อง (SQLite) เพื่อใช้งานออฟไลน์ ต้องลงชื่อเข้าใช้ด้วย <strong>Apple</strong> หรือ <strong>Google</strong> เราไม่ขายข้อมูลของคุณและไม่ติดตามข้ามแอปเพื่อโฆษณา</p>
 
     <h2>การลงชื่อเข้าใช้</h2>
-    <p>การยืนยันตัวตนใช้ <strong>Supabase</strong> เรารับตัวระบุผู้ใช้และอีเมล (หากผู้ให้บริการแชร์มา) เราไม่เก็บรหัสผ่านของคุณ</p>
+    <p>การยืนยันตัวตนใช้เซิร์ฟเวอร์ <strong>PocketBase</strong> ที่เราดูแลเอง เรารับตัวระบุผู้ใช้และอีเมล (หากผู้ให้บริการแชร์มา) เราไม่เก็บรหัสผ่านของคุณ</p>
 
     <h2>Cloud Sync (ทุกแผน)</h2>
-    <p>หลังลงชื่อเข้าใช้ ข้อมูลรายการทั้งหมด — ชื่อ จำนวนเงิน วันที่ตัดรอบ หมวดหมู่ แท็ก ประวัติการจ่าย การตั้งงบ และฟิลด์ที่เกี่ยวข้อง — จะถูกเก็บใน <strong>Supabase</strong> ภายใต้บัญชีของคุณ ซิงค์อัตโนมัติเมื่อใช้งานและเมื่อกลับมาออนไลน์ <strong>ผู้ใช้ฟรีและ Premium ได้รับการซิงค์เหมือนกัน</strong> มีฐานข้อมูล SQLite ในเครื่องเก็บสำเนาไว้เพื่อความเร็วและการใช้งานออฟไลน์</p>
+    <p>หลังลงชื่อเข้าใช้ ข้อมูลรายการทั้งหมด — ชื่อ จำนวนเงิน วันที่ตัดรอบ หมวดหมู่ แท็ก ประวัติการจ่าย การตั้งงบ และฟิลด์ที่เกี่ยวข้อง — จะถูกเก็บในเซิร์ฟเวอร์ <strong>PocketBase</strong> ที่เราดูแลเอง ภายใต้บัญชีของคุณ ซิงค์อัตโนมัติเมื่อใช้งานและเมื่อกลับมาออนไลน์ <strong>ผู้ใช้ฟรีและ Premium ได้รับการซิงค์เหมือนกัน</strong> มีฐานข้อมูล SQLite ในเครื่องเก็บสำเนาไว้เพื่อความเร็วและการใช้งานออฟไลน์</p>
 
     <h2>ข้อมูลสรุปตอนเริ่มใช้ (ไม่บังคับ)</h2>
     <p>หลังลงชื่อเข้าใช้ เราอาจอัปโหลดข้อมูลสรุปแบบไม่ระบุตัวตน (ช่วงจำนวนรายการ สิทธิ์การแจ้งเตือน ช่วงงบประมาณ) เพื่อพัฒนาผลิตภัณฑ์ โดยไม่รวมชื่อรายการหรือจำนวนเงินจริงของคุณ</p>
@@ -62,7 +62,7 @@
     <h2>บริการบุคคลที่สาม</h2>
     <ul>
       <li><strong>Apple / Google</strong> — การลงชื่อเข้าใช้</li>
-      <li><strong>Supabase</strong> — Cloud Sync และการยืนยันตัวตน</li>
+      <li><strong>PocketBase</strong> (self-hosted) — Cloud Sync และการยืนยันตัวตน</li>
       <li><strong>RevenueCat</strong> — สถานะการสมัคร Premium</li>
       <li><strong>open.er-api.com</strong> — อัตราแลกเปลี่ยน</li>
       <li><strong>Expo / EAS</strong> — การอัปเดตแอป</li>
@@ -88,13 +88,13 @@
     <p class="updated">Last updated: 28 May 2026</p>
 
     <h2>Summary</h2>
-    <p>Sub Sook <strong>syncs your data to the cloud</strong> (Supabase) under your account for <strong>both Free and Sub Sook Premium</strong>. A local SQLite copy on your device supports offline use. Sign-in with <strong>Apple</strong> or <strong>Google</strong> is required. We do not sell your data or use cross-app advertising tracking.</p>
+    <p>Sub Sook <strong>syncs your data to the cloud</strong> (our self-hosted PocketBase server) under your account for <strong>both Free and Sub Sook Premium</strong>. A local SQLite copy on your device supports offline use. Sign-in with <strong>Apple</strong> or <strong>Google</strong> is required. We do not sell your data or use cross-app advertising tracking.</p>
 
     <h2>Account &amp; sign-in</h2>
-    <p>Authentication uses Supabase. We receive your provider user ID and email (if shared by the provider). We do not store your password.</p>
+    <p>Authentication uses our self-hosted PocketBase server. We receive your provider user ID and email (if shared by the provider). We do not store your password.</p>
 
     <h2>Cloud Sync (all plans)</h2>
-    <p>After sign-in, all item data — names, amounts, billing dates, categories, tags, payment history, budget settings, and related fields — is stored in <strong>Supabase</strong> under your account and synced automatically when you use the app and when connectivity returns. <strong>Free and Premium users receive the same cloud sync.</strong> A local SQLite database keeps a copy for speed and offline access.</p>
+    <p>After sign-in, all item data — names, amounts, billing dates, categories, tags, payment history, budget settings, and related fields — is stored on our self-hosted <strong>PocketBase</strong> server under your account and synced automatically when you use the app and when connectivity returns. <strong>Free and Premium users receive the same cloud sync.</strong> A local SQLite database keeps a copy for speed and offline access.</p>
 
     <h2>Onboarding summary (optional)</h2>
     <p>After sign-in we may upload a non-identifying onboarding summary (item-count band, notification permission, budget range) to improve the product. It does not include your real item names or amounts.</p>
@@ -117,7 +117,7 @@
     <h2>Third-party services</h2>
     <ul>
       <li><strong>Apple / Google</strong> — Sign-in</li>
-      <li><strong>Supabase</strong> — Cloud Sync and authentication</li>
+      <li><strong>PocketBase</strong> (self-hosted) — Cloud Sync and authentication</li>
       <li><strong>RevenueCat</strong> — Premium subscription status</li>
       <li><strong>open.er-api.com</strong> — Exchange rates</li>
       <li><strong>Expo / EAS</strong> — App updates</li>
