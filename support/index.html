@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="th" class="lang-th">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Sub Sook — Support</title>
+  <title>Sub Sook — Support / ความช่วยเหลือ</title>
   <style>
     :root { --fg: #1a2e26; --muted: #5a7268; --accent: #33c9a1; --bg: #f9fcfb; }
     body { font-family: system-ui, -apple-system, sans-serif; line-height: 1.6; color: var(--fg); background: var(--bg); margin: 0; padding: 1.5rem; max-width: 42rem; margin-inline: auto; }
@@ -12,26 +12,62 @@
     h2 { font-size: 1.1rem; margin-top: 1.5rem; color: var(--accent); }
     a { color: var(--accent); }
     ul { padding-left: 1.25rem; }
+    .lang-switch { display: flex; gap: 0.5rem; margin-bottom: 1.25rem; }
+    .lang-switch button { font: inherit; padding: 0.35rem 0.9rem; border: 1px solid var(--accent); background: transparent; color: var(--accent); border-radius: 999px; cursor: pointer; }
+    .lang-switch button.active { background: var(--accent); color: #fff; }
+    html.lang-th .en { display: none; }
+    html.lang-en .th { display: none; }
   </style>
+  <script>
+    function setLang(l){document.documentElement.className='lang-'+l;document.documentElement.lang=l;document.querySelectorAll('.lang-switch button').forEach(function(b){b.classList.toggle('active',b.dataset.lang===l);});}
+  </script>
 </head>
 <body>
-  <h1>Sub Sook Support</h1>
-  <p class="updated">เราพร้อมช่วยเหลือ · We're here to help</p>
+  <div class="lang-switch">
+    <button data-lang="th" class="active" onclick="setLang('th')">ภาษาไทย</button>
+    <button data-lang="en" onclick="setLang('en')">English</button>
+  </div>
 
-  <h2>ติดต่อเรา / Contact us</h2>
-  <p>อีเมล / Email: <a href="mailto:subsook@proton.me">subsook@proton.me</a></p>
-  <p>เราจะตอบกลับภายใน 1–2 วันทำการ · We usually reply within 1–2 business days.</p>
+  <div class="th">
+    <h1>ความช่วยเหลือ Sub Sook</h1>
+    <p class="updated">เราพร้อมช่วยเหลือคุณ</p>
 
-  <h2>คำถามที่พบบ่อย / FAQ</h2>
-  <ul>
-    <li><strong>เพิ่มรายการ / Add a subscription:</strong> แตะปุ่ม + บนหน้าแรก แล้วกรอกชื่อ ยอดเงิน และวันที่ตัดรอบ · Tap the + button on the home screen, then enter the name, amount, and billing date.</li>
-    <li><strong>แจ้งเตือน / Reminders:</strong> เปิดการแจ้งเตือนได้ในหน้า Settings เพื่อรับเตือนล่วงหน้า 3–14 วันก่อนตัดเงิน · Enable notifications in Settings to get reminded 3–14 days before a charge.</li>
-    <li><strong>ซิงค์ข้อมูล / Cloud sync:</strong> ล็อกอินด้วย Apple หรือ Google เพื่อซิงค์ข้อมูลขึ้นคลาวด์ ใช้ได้ทั้งแผนฟรีและ Premium · Sign in with Apple or Google to sync your data to the cloud (Free and Premium).</li>
-    <li><strong>Sub Sook Premium:</strong> ปลดล็อกการส่งออกข้อมูลและลิมิตที่สูงขึ้น จัดการการสมัครได้ที่ Settings ของอุปกรณ์ · Unlocks exports and higher limits; manage your subscription in your device Settings.</li>
-    <li><strong>ลบข้อมูล / Delete your data:</strong> ไปที่ Profile เพื่อออกจากระบบ หรือลบบัญชีและข้อมูลทั้งหมด · Go to Profile to sign out, or delete your account and all data.</li>
-  </ul>
+    <h2>ติดต่อเรา</h2>
+    <p>อีเมล: <a href="mailto:subsook@proton.me">subsook@proton.me</a></p>
+    <p>เราจะตอบกลับภายใน 1–2 วันทำการ</p>
 
-  <h2>ความเป็นส่วนตัว / Legal</h2>
-  <p><a href="../privacy/">Privacy Policy</a> · <a href="../terms/">Terms of Use</a></p>
+    <h2>คำถามที่พบบ่อย</h2>
+    <ul>
+      <li><strong>เพิ่มรายการ:</strong> แตะปุ่ม + บนหน้าแรก แล้วกรอกชื่อ ยอดเงิน และวันที่ตัดรอบ</li>
+      <li><strong>แจ้งเตือน:</strong> เปิดการแจ้งเตือนในหน้า Settings เพื่อรับเตือนล่วงหน้า 3–14 วันก่อนตัดเงิน</li>
+      <li><strong>ซิงค์ข้อมูล:</strong> ล็อกอินด้วย Apple หรือ Google เพื่อซิงค์ข้อมูลขึ้นคลาวด์ ใช้ได้ทั้งแผนฟรีและ Premium</li>
+      <li><strong>Sub Sook Premium:</strong> ปลดล็อกการส่งออกข้อมูลและลิมิตที่สูงขึ้น จัดการการสมัครได้ที่ตั้งค่าของอุปกรณ์</li>
+      <li><strong>ลบข้อมูล:</strong> ไปที่ Profile เพื่อออกจากระบบ หรือลบบัญชีและข้อมูลทั้งหมด</li>
+    </ul>
+
+    <h2>ความเป็นส่วนตัวและข้อกำหนด</h2>
+    <p><a href="../privacy/">นโยบายความเป็นส่วนตัว</a> · <a href="../terms/">ข้อกำหนดการใช้งาน</a></p>
+  </div>
+
+  <div class="en">
+    <h1>Sub Sook Support</h1>
+    <p class="updated">We're here to help</p>
+
+    <h2>Contact us</h2>
+    <p>Email: <a href="mailto:subsook@proton.me">subsook@proton.me</a></p>
+    <p>We usually reply within 1–2 business days.</p>
+
+    <h2>FAQ</h2>
+    <ul>
+      <li><strong>Add a subscription:</strong> Tap the + button on the home screen, then enter the name, amount, and billing date.</li>
+      <li><strong>Reminders:</strong> Enable notifications in Settings to get reminded 3–14 days before a charge.</li>
+      <li><strong>Cloud sync:</strong> Sign in with Apple or Google to sync your data to the cloud (Free and Premium).</li>
+      <li><strong>Sub Sook Premium:</strong> Unlocks exports and higher limits; manage your subscription in your device Settings.</li>
+      <li><strong>Delete your data:</strong> Go to Profile to sign out, or delete your account and all data.</li>
+    </ul>
+
+    <h2>Legal</h2>
+    <p><a href="../privacy/">Privacy Policy</a> · <a href="../terms/">Terms of Use</a></p>
+  </div>
 </body>
 </html>

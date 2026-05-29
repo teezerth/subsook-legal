@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="th" class="lang-th">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Sub Sook — Privacy Policy</title>
+  <title>Sub Sook — Privacy Policy / นโยบายความเป็นส่วนตัว</title>
   <style>
     :root { --fg: #1a2e26; --muted: #5a7268; --accent: #33c9a1; --bg: #f9fcfb; }
     body { font-family: system-ui, -apple-system, sans-serif; line-height: 1.6; color: var(--fg); background: var(--bg); margin: 0; padding: 1.5rem; max-width: 42rem; margin-inline: auto; }
@@ -12,39 +12,130 @@
     h2 { font-size: 1.1rem; margin-top: 1.5rem; color: var(--accent); }
     a { color: var(--accent); }
     ul { padding-left: 1.25rem; }
+    .lang-switch { display: flex; gap: 0.5rem; margin-bottom: 1.25rem; }
+    .lang-switch button { font: inherit; padding: 0.35rem 0.9rem; border: 1px solid var(--accent); background: transparent; color: var(--accent); border-radius: 999px; cursor: pointer; }
+    .lang-switch button.active { background: var(--accent); color: #fff; }
+    html.lang-th .en { display: none; }
+    html.lang-en .th { display: none; }
   </style>
+  <script>
+    function setLang(l){document.documentElement.className='lang-'+l;document.documentElement.lang=l;document.querySelectorAll('.lang-switch button').forEach(function(b){b.classList.toggle('active',b.dataset.lang===l);});}
+  </script>
 </head>
 <body>
-  <h1>Sub Sook Privacy Policy</h1>
-  <p class="updated">Last updated: 28 May 2026</p>
+  <div class="lang-switch">
+    <button data-lang="th" class="active" onclick="setLang('th')">ภาษาไทย</button>
+    <button data-lang="en" onclick="setLang('en')">English</button>
+  </div>
 
-  <h2>Summary</h2>
-  <p>Sub Sook <strong>syncs your data to the cloud</strong> (Supabase) under your account for <strong>both Free and Sub Sook Premium</strong>. A local SQLite copy on your device supports offline use. Sign-in with <strong>Apple</strong> or <strong>Google</strong> is required.</p>
+  <div class="th">
+    <h1>นโยบายความเป็นส่วนตัว Sub Sook</h1>
+    <p class="updated">อัปเดตล่าสุด: 28 พฤษภาคม 2569</p>
 
-  <h2>Account &amp; sign-in</h2>
-  <p>Authentication uses Supabase. When you sign in with Apple or Google we receive your provider user ID and email (if you share it through the provider's consent screen). We do not store your password and we do not receive your social-graph data (friends list, posts, photos). When signing in with Apple we additionally generate a random nonce; the nonce is sent (hashed) to Apple and verified by Supabase to prevent token replay.</p>
+    <h2>สรุป</h2>
+    <p>Sub Sook <strong>ซิงค์ข้อมูล Subscription และค่าใช้จ่ายประจำของคุณขึ้นคลาวด์</strong> (Supabase) ภายใต้บัญชีของคุณ ทั้ง <strong>แผนฟรีและ Sub Sook Premium</strong> และเก็บสำเนาไว้ในเครื่อง (SQLite) เพื่อใช้งานออฟไลน์ ต้องลงชื่อเข้าใช้ด้วย <strong>Apple</strong> หรือ <strong>Google</strong> เราไม่ขายข้อมูลของคุณและไม่ติดตามข้ามแอปเพื่อโฆษณา</p>
 
-  <h2>Cloud Sync (all plans)</h2>
-  <p>After sign-in, all subscription and expense data syncs to Supabase automatically — <strong>Free and Premium alike</strong>. The app keeps a local copy and syncs when you are back online.</p>
+    <h2>การลงชื่อเข้าใช้</h2>
+    <p>การยืนยันตัวตนใช้ <strong>Supabase</strong> เรารับตัวระบุผู้ใช้และอีเมล (หากผู้ให้บริการแชร์มา) เราไม่เก็บรหัสผ่านของคุณ</p>
 
-  <h2>Data fields</h2>
-  <ul>
-    <li>Item names, amounts, billing dates, categories, tags, shared members, payment history, budget settings, display name</li>
-    <li>Stored on cloud sync and cached locally on your device</li>
-  </ul>
+    <h2>Cloud Sync (ทุกแผน)</h2>
+    <p>หลังลงชื่อเข้าใช้ ข้อมูลรายการทั้งหมด — ชื่อ จำนวนเงิน วันที่ตัดรอบ หมวดหมู่ แท็ก ประวัติการจ่าย การตั้งงบ และฟิลด์ที่เกี่ยวข้อง — จะถูกเก็บใน <strong>Supabase</strong> ภายใต้บัญชีของคุณ ซิงค์อัตโนมัติเมื่อใช้งานและเมื่อกลับมาออนไลน์ <strong>ผู้ใช้ฟรีและ Premium ได้รับการซิงค์เหมือนกัน</strong> มีฐานข้อมูล SQLite ในเครื่องเก็บสำเนาไว้เพื่อความเร็วและการใช้งานออฟไลน์</p>
 
-  <h2>Exchange rates, notifications, biometric lock, widget</h2>
-  <p>FX from open.er-api.com; local notifications; biometric on device only; iOS Premium widget uses App Group on device.</p>
+    <h2>ข้อมูลสรุปตอนเริ่มใช้ (ไม่บังคับ)</h2>
+    <p>หลังลงชื่อเข้าใช้ เราอาจอัปโหลดข้อมูลสรุปแบบไม่ระบุตัวตน (ช่วงจำนวนรายการ สิทธิ์การแจ้งเตือน ช่วงงบประมาณ) เพื่อพัฒนาผลิตภัณฑ์ โดยไม่รวมชื่อรายการหรือจำนวนเงินจริงของคุณ</p>
 
-  <h2>Sub Sook Premium</h2>
-  <p>RevenueCat / Apple / Google for billing. Premium adds exports and higher limits — <strong>not</strong> exclusive cloud sync.</p>
+    <h2>อัตราแลกเปลี่ยน</h2>
+    <p>อัตรา USD/THB จาก <strong>open.er-api.com</strong> (ไม่ต้องมีบัญชี) แคชราว 24 ชั่วโมง และใช้ค่าเริ่มต้นเมื่อออฟไลน์</p>
 
-  <h2>Deleting data</h2>
-  <p>Item deletes sync to cloud. Uninstall removes local copy. Sign out on Profile. Delete account and all data (cloud + device): Privacy Policy → “Delete all my data” at the bottom of Deleting data. Support: <a href="mailto:subsook@proton.me">subsook@proton.me</a></p>
+    <h2>การแจ้งเตือน</h2>
+    <p>การแจ้งเตือนในเครื่องจะเตือนก่อนถึงวันตัดรอบ คุณปิดได้ในตั้งค่าระบบหรือในแอป</p>
 
-  <h2>Contact</h2>
-  <p><a href="mailto:subsook@proton.me">subsook@proton.me</a></p>
+    <h2>การล็อกด้วยไบโอเมตริก</h2>
+    <p>Face ID / Touch ID / ลายนิ้วมือ ประมวลผลในเครื่องเท่านั้น เราไม่เก็บข้อมูลไบโอเมตริก</p>
 
-  <p><a href="../terms/">Terms of Use</a></p>
+    <h2>วิดเจ็ตหน้าจอ (Premium, iOS)</h2>
+    <p>ข้อมูลสรุปของวิดเจ็ตแชร์ระหว่างแอปกับวิดเจ็ตผ่าน <strong>App Group</strong> ในเครื่อง ไม่ได้ส่งขึ้นเซิร์ฟเวอร์ของเราแยกต่างหากสำหรับวิดเจ็ต</p>
+
+    <h2>Sub Sook Premium</h2>
+    <p>จัดการโดย <strong>RevenueCat</strong> เรียกเก็บเงินโดย <strong>Apple</strong> หรือ <strong>Google</strong> เรารับเฉพาะสถานะการสมัคร ไม่ใช่รายละเอียดบัตร ไม่มีการทดลอง Premium ฟรีในแอป Premium เพิ่มลิมิตรายการและฟีเจอร์ส่งออก <strong>ไม่ใช่</strong> การซิงค์คลาวด์แบบเฉพาะ</p>
+
+    <h2>บริการบุคคลที่สาม</h2>
+    <ul>
+      <li><strong>Apple / Google</strong> — การลงชื่อเข้าใช้</li>
+      <li><strong>Supabase</strong> — Cloud Sync และการยืนยันตัวตน</li>
+      <li><strong>RevenueCat</strong> — สถานะการสมัคร Premium</li>
+      <li><strong>open.er-api.com</strong> — อัตราแลกเปลี่ยน</li>
+      <li><strong>Expo / EAS</strong> — การอัปเดตแอป</li>
+    </ul>
+    <p>เราไม่ใช้ App Tracking Transparency เพื่อโฆษณา</p>
+
+    <h2>การลบข้อมูล</h2>
+    <ul>
+      <li><strong>รายการ:</strong> การลบในแอปจะซิงค์การลบขึ้นคลาวด์</li>
+      <li><strong>สำเนาในเครื่อง:</strong> การถอนการติดตั้งจะลบฐานข้อมูลในเครื่อง</li>
+      <li><strong>ออกจากระบบ:</strong> ทำได้ที่หน้า Profile</li>
+      <li><strong>บัญชีและข้อมูลทั้งหมด:</strong> ในแอปเปิด <strong>Privacy Policy</strong> แล้วเลือก <strong>ลบข้อมูลทั้งหมดของฉัน</strong> ที่ท้ายหัวข้อ “การลบข้อมูล” (ลบบัญชีคลาวด์ ข้อมูลคลาวด์ และข้อมูลในเครื่อง) หรืออีเมลมาที่ <strong>subsook@proton.me</strong> จากอีเมลที่ผูกกับ Apple/Google</li>
+    </ul>
+
+    <h2>ติดต่อ</h2>
+    <p><a href="mailto:subsook@proton.me">subsook@proton.me</a></p>
+
+    <p><a href="../terms/">ข้อกำหนดการใช้งาน</a></p>
+  </div>
+
+  <div class="en">
+    <h1>Sub Sook Privacy Policy</h1>
+    <p class="updated">Last updated: 28 May 2026</p>
+
+    <h2>Summary</h2>
+    <p>Sub Sook <strong>syncs your data to the cloud</strong> (Supabase) under your account for <strong>both Free and Sub Sook Premium</strong>. A local SQLite copy on your device supports offline use. Sign-in with <strong>Apple</strong> or <strong>Google</strong> is required. We do not sell your data or use cross-app advertising tracking.</p>
+
+    <h2>Account &amp; sign-in</h2>
+    <p>Authentication uses Supabase. We receive your provider user ID and email (if shared by the provider). We do not store your password.</p>
+
+    <h2>Cloud Sync (all plans)</h2>
+    <p>After sign-in, all item data — names, amounts, billing dates, categories, tags, payment history, budget settings, and related fields — is stored in <strong>Supabase</strong> under your account and synced automatically when you use the app and when connectivity returns. <strong>Free and Premium users receive the same cloud sync.</strong> A local SQLite database keeps a copy for speed and offline access.</p>
+
+    <h2>Onboarding summary (optional)</h2>
+    <p>After sign-in we may upload a non-identifying onboarding summary (item-count band, notification permission, budget range) to improve the product. It does not include your real item names or amounts.</p>
+
+    <h2>Exchange rates</h2>
+    <p>USD/THB rates from <strong>open.er-api.com</strong> (no account). Cached ~24 hours with defaults when offline.</p>
+
+    <h2>Notifications</h2>
+    <p>Local notifications remind you before billing dates. You can disable them in system settings or in the app.</p>
+
+    <h2>Biometric lock</h2>
+    <p>Face ID / Touch ID / fingerprint is processed on your device only — we do not store biometric data.</p>
+
+    <h2>Home screen widget (Premium, iOS)</h2>
+    <p>Widget summary data is shared between the app and widget via an <strong>App Group</strong> on your device. It is not sent to our servers separately for the widget.</p>
+
+    <h2>Sub Sook Premium</h2>
+    <p>Managed by <strong>RevenueCat</strong>, billed by <strong>Apple</strong> or <strong>Google</strong>. We receive subscription status only, not full card details. No free Premium trial in the app. Premium adds higher item limits and export features — <strong>not</strong> exclusive cloud sync.</p>
+
+    <h2>Third-party services</h2>
+    <ul>
+      <li><strong>Apple / Google</strong> — Sign-in</li>
+      <li><strong>Supabase</strong> — Cloud Sync and authentication</li>
+      <li><strong>RevenueCat</strong> — Premium subscription status</li>
+      <li><strong>open.er-api.com</strong> — Exchange rates</li>
+      <li><strong>Expo / EAS</strong> — App updates</li>
+    </ul>
+    <p>We do not use App Tracking Transparency for ads.</p>
+
+    <h2>Deleting data</h2>
+    <ul>
+      <li><strong>Items:</strong> Deleting in the app syncs removal to the cloud.</li>
+      <li><strong>Local copy:</strong> Uninstalling removes the on-device database.</li>
+      <li><strong>Sign out:</strong> Available on the Profile screen.</li>
+      <li><strong>Account &amp; all data:</strong> In the app, open <strong>Privacy Policy</strong> and use <strong>Delete all my data</strong> at the bottom of the “Deleting data” section (removes cloud account, cloud data, and on-device data). You may also email <strong>subsook@proton.me</strong> from your Apple/Google linked address.</li>
+    </ul>
+
+    <h2>Contact</h2>
+    <p><a href="mailto:subsook@proton.me">subsook@proton.me</a></p>
+
+    <p><a href="../terms/">Terms of Use</a></p>
+  </div>
 </body>
 </html>
